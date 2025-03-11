@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
 import { format } from 'date-fns';
 import { EventLinks } from './EventLinks';

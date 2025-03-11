@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { PlaceholderImage } from './PlaceholderImage';
-import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 interface EventCardProps {
   title: string;

@@ -4,7 +4,6 @@ import { Navbar } from '@/components/Navbar';
 import { TamilAnimation } from '@/components/TamilAnimation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 // This will be set to true when content is ready
 const SHOW_FULL_CONTENT = false;
@@ -47,8 +46,6 @@ const aboutContent = {
 };
 
 export default function About() {
-  const [isAnimating, setIsAnimating] = useState(true);
-
   if (!SHOW_FULL_CONTENT) {
     return (
       <main className="min-h-screen bg-white dark:bg-gray-900">

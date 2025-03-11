@@ -64,7 +64,7 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-100 max-w-2xl mx-auto"
             >
-              Have questions? We'd love to hear from you.
+              Have questions? We&apos;d love to hear from you.
             </motion.p>
           </div>
         </div>

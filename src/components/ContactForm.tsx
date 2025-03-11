@@ -48,7 +48,7 @@ export function ContactForm() {
       await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -78,7 +78,7 @@ export function ContactForm() {
               Message Sent Successfully!
             </h3>
             <p className="text-green-600 dark:text-green-400">
-              Thank you for reaching out. We'll get back to you soon.
+              Thank you for reaching out. We&apos;ll get back to you soon.
             </p>
             <button
               onClick={() => setSubmitStatus(null)}
