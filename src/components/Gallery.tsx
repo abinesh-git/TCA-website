@@ -55,25 +55,10 @@ export function Gallery() {
     setLoadedImages(prev => new Set([...prev, imageId]));
   };
 
-  // Split images based on screen size
   const rowCount = isMobile ? 6 : 4;
-  const rows = Array.from({ length: rowCount }, (_, i) => 
+  const rows = Array.from({ length: rowCount }, (_, i) =>
     images.filter((_, index) => index % rowCount === i)
   );
-
-  // Animation for each row
-  const rowVariants = {
-    animate: (custom: number) => ({
-      x: [0, '-100%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          duration: 15 + custom * 1.5,
-          ease: "linear"
-        }
-      }
-    })
-  };
 
   if (error) {
     return (
@@ -99,23 +84,21 @@ export function Gallery() {
             <motion.div
               key={rowIndex}
               className="flex gap-8 md:gap-8"
-              variants={rowVariants}
-              animate="animate"
-              custom={rowIndex}
-              style={{ 
+              animate={{ x: ['0%', '-100%'] }}
+              transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+              style={{
                 height: isMobile ? 'calc(15vh - 1rem)' : 'calc(25vh - 2rem)',
               }}
             >
-              {/* Duplicate images for seamless loop */}
               {[...rowImages, ...rowImages].map((image, index) => (
                 <motion.div
                   key={`${image.id}-${index}`}
                   whileHover={{ scale: 1.05 }}
                   className="relative h-full rounded-lg overflow-hidden"
-                  style={{ 
+                  style={{
                     minWidth: isMobile ? '200px' : '300px',
-                    width: isMobile 
-                      ? 'calc(2 * (15vh - 1rem))' 
+                    width: isMobile
+                      ? 'calc(2 * (15vh - 1rem))'
                       : 'calc(2 * (25vh - 2rem))'
                   }}
                 >
@@ -126,9 +109,10 @@ export function Gallery() {
                     className={`object-cover transition-opacity duration-300 ${
                       loadedImages.has(image.id) ? 'opacity-100' : 'opacity-0'
                     }`}
-                    sizes={isMobile 
-                      ? "(max-width: 768px) 100vw" 
-                      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes={
+                      isMobile
+                        ? '(max-width: 768px) 100vw'
+                        : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
                     }
                     quality={75}
                     loading="lazy"
@@ -166,7 +150,7 @@ export function Gallery() {
                 onClick={() => setSelectedImage(null)}
               />
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -202,4 +186,4 @@ export function Gallery() {
       </AnimatePresence>
     </>
   );
-} 
+}
