@@ -19,7 +19,7 @@ export default function GalleryPage() {
             Our Gallery
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Capturing moments and memories from our vibrant Tamil cultural events and celebrations
+            Capturing moments and memories from Tamil cultural events and celebrations
           </p>
         </motion.div>
         <Gallery />

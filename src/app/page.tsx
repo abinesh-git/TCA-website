@@ -11,23 +11,13 @@ import { useState } from 'react';
 
 const sampleEvents = [
   {
-    title: "Tamil New Year Celebration",
-    date: "April 14, 2024",
-    location: "Community Center",
-    description: "Join us for a grand celebration of Tamil New Year with traditional performances, food, and cultural activities."
+    title: "Freshers Event 2025",
+    date: "will be shared soon",
+    location: "will be shared soon",
+    description: "Welcoming incoming students to insti"
   },
-  {
-    title: "Classical Dance Workshop",
-    date: "May 1, 2024",
-    location: "Dance Studio",
-    description: "Learn the beautiful art of Bharatanatyam with our experienced instructors."
-  },
-  {
-    title: "Tamil Language Classes",
-    date: "Every Saturday",
-    location: "Learning Center",
-    description: "Weekly Tamil language classes for all levels, from beginners to advanced learners."
-  }
+  
+  
 ];
 
 export default function Home() {
@@ -73,8 +63,14 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-300"
-              >
+                onClick={() => {
+                  const section = document.getElementById('events');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="mt-22 text-white px-8 py-4 rounded-xl font-semibold text-lg bg-white/10 backdrop-blur-lg border border-white/30 shadow-lghover:bg-white/20 transition-all duration-300"
+                >
                 Welcome
               </motion.button>
             </motion.div>
@@ -88,6 +84,7 @@ export default function Home() {
           <div className="space-y-16">
             {/* Announcements and Timeline Grid */}
             <motion.div
+              id="events"  // ← Add this here
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

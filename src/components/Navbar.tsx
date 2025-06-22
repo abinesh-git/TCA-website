@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
-import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Logo } from '@/components/Logo';
 
 const navLinks = [
@@ -17,7 +16,6 @@ const navLinks = [
 export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -57,32 +55,18 @@ export function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center">
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-4">
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Toggle dark mode"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
-              {theme === 'dark' ? (
-                <SunIcon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+              {isMobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6 text-gray-700 dark:text-gray-200" />
               ) : (
-                <MoonIcon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+                <Bars3Icon className="h-6 w-6 text-gray-700 dark:text-gray-200" />
               )}
             </button>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden ml-4">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              >
-                {isMobileMenuOpen ? (
-                  <XMarkIcon className="h-6 w-6 text-gray-700 dark:text-gray-200" />
-                ) : (
-                  <Bars3Icon className="h-6 w-6 text-gray-700 dark:text-gray-200" />
-                )}
-              </button>
-            </div>
           </div>
         </div>
 
@@ -110,4 +94,4 @@ export function Navbar() {
       </div>
     </nav>
   );
-} 
+}

@@ -10,6 +10,11 @@ interface EventLink {
 
 const eventLinks: EventLink[] = [
   {
+    title: "Tamil Festival 2025",
+    date: "April 06, 2025",
+    driveLink: "https://drive.google.com/drive/folders/your-folder-id-1"
+  },
+  {
     title: "Pongal Celebration 2025",
     date: "January 30, 2025",
     driveLink: "https://drive.google.com/drive/folders/your-folder-id-1"
@@ -17,6 +22,11 @@ const eventLinks: EventLink[] = [
   {
     title: "Kaarthigai Deepam 2024",
     date: "December 14, 2024",
+    driveLink: "https://drive.google.com/drive/folders/your-folder-id-2"
+  },
+  {
+    title: "Freshers Event 2024",
+    date: "October 12, 2024",
     driveLink: "https://drive.google.com/drive/folders/your-folder-id-2"
   },
   // Add more events here

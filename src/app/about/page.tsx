@@ -61,7 +61,8 @@ export default function About() {
               About TCA
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
-              Our story is being crafted with care. Check back soon to learn more about our journey.
+              Our story is being crafted with care. <br />
+              Check back soon to learn more about our journey.
             </p>
             
             <TamilAnimation />

@@ -37,23 +37,34 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (!validateForm()) return;
-
     setIsSubmitting(true);
-    
-    // Here you would typically send the form data to your backend
-    // For now, we'll simulate a successful submission
+  
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
+      const res = await fetch('https://formspree.io/f/xvgrwpaw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+  
+      if (!res.ok) throw new Error('Failed to send');
+  
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch {
+    } catch (error) {
+      console.error('Formspree error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
+  
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

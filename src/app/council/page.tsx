@@ -31,7 +31,7 @@ const facultyAdvisors = [
 
 const studentCouncil = [
   {
-    name: "Ms. Amruta",
+    name: "Amruta",
     role: "Secretary",
     image: "/images/council/secretary.jpeg",
     email: "secretary@example.com",
@@ -41,45 +41,56 @@ const studentCouncil = [
     bio: "Passionate about organizing cultural events and fostering community engagement."
   },
   {
-    name: "Ms. Oviya S",
+    name: "Oviya S",
     role: "Joint Secretary",
     image: "/images/council/joint-secretary.jpeg",
     email: "jointsecretary@example.com",
     department: "Electrical Engineering",
-    year: "3rd year, B.Tech+M.Tech",
+    year: "4th year, B.Tech+M.Tech",
     linkedIn: "https://www.linkedin.com/in/oviya23/?originalSubdomain=in",
     bio: "Dedicated to promoting Tamil culture and traditions among students."
   },
+
   {
-    name: "Mr. Nikil",
+    name: "Mr. Abinesh",
+    role: "Outreach Manager",
+    image: "/images/council/media-manager.JPG",
+    email: "abinesh@iitb.ac.in",
+    department: "Metallurgy and Materials Science",
+    year: "3rd year, B.Tech",
+    linkedIn: "https://linkedin.com/in/abi-nesh",
+    bio: "",
+  },
+  {
+    name: "Nikil",
     role: "Treasurer",
     image: "/images/council/treasurer.jpeg",
     email: "treasurer@example.com",
     department: "Computer Science Engineering",
-    year: "3rd Year, B.Tech",
+    year: "4th Year, B.Tech",
     linkedIn: "https://linkedin.com/in/michaelbrown",
     bio: "Managing association finances and budgeting for cultural events."
   },
   {
-    name: "Mr. Tarun",
-    role: "Design Manager",
+    name: "Hiring Now!!!",
+    role: "Design Nominee",
     image: "/images/council/design-manager.jpeg",
     email: "design@example.com",
-    department: "IDC",
-    year: "4th year, B.Des",
+    department: "tba",
+    year: "tba",
     linkedIn: "https://linkedin.com/in/emilydavis",
     bio: "Creating visual content and maintaining the association's brand identity."
   },
   {
-    name: "Mr. Abinesh",
-    role: "Media Manager",
-    image: "/images/council/media-manager.JPG",
-    email: "abinesh@iitb.ac.in",
-    department: "Metallurgy and Materials Science",
-    year: "2nd year, B.Tech",
-    linkedIn: "https://linkedin.com/in/abi-nesh",
+    name: "Hiring Now!!!",
+    role: "Media Nominee",
+    image: "/images/council/design-manager.jpeg",
+    email: "design@example.com",
+    department: "tba",
+    year: "tba",
+    linkedIn: "https://linkedin.com/in/emilydavis",
     bio: "Handling social media presence and event documentation."
-  }
+  },
 ];
 
 export default function Council() {
@@ -126,7 +137,7 @@ export default function Council() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
-                <p className="text-lg font-medium">Council 2024 - 2025</p>
+                <p className="text-lg font-medium">Council 2025 - 2026</p>
               </div>
             </motion.div>
           </div>

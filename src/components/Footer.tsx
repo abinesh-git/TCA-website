@@ -50,6 +50,16 @@ export function Footer() {
                 </svg>
               </a>
               <a
+                href="https://youtube.com/@tcaiitbombay?si=yMLomJx4k6e3ZjgL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a2.935 2.935 0 0 0-2.063-2.075C19.423 3.636 12 3.636 12 3.636s-7.423 0-9.435.475A2.935 2.935 0 0 0 .502 6.186C0 8.204 0 12 0 12s0 3.796.502 5.814a2.935 2.935 0 0 0 2.063 2.075c2.012.475 9.435.475 9.435.475s7.423 0 9.435-.475a2.935 2.935 0 0 0 2.063-2.075C24 15.796 24 12 24 12s0-3.796-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+              <a
                 href="https://www.facebook.com/tcaiitb"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,7 +86,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/abi-nesh"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-gray-400 hover:text-blue-300 transition-colors"
             >
               Abinesh
             </a>
